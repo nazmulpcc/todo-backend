@@ -1,0 +1,32 @@
+{
+    "name": "nazmulpcc/todo-api",
+    "description": "A simple todo api",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nazmul Alam",
+            "email": "nazmulpcc@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "app/Helpers/functions.php"
+        ],
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "bramus/router": "~1.4",
+        "firebase/php-jwt": "^5.2",
+        "vlucas/phpdotenv": "^4.1",
+        "illuminate/support": "^7.4",
+        "illuminate/database": "^7.4",
+        "illuminate/pagination": "^7.4",
+        "symfony/http-foundation": "^5.0"
+    }
+}
