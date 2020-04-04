@@ -53,6 +53,6 @@ class AuthController extends Controller
     public function me()
     {
         $this->mustLogin();
-        $this->failed();
+        $this->success(Auth::user());
     }
 }
