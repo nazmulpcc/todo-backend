@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Database\Schema\Blueprint;
+use App\Models\User;
 
 return [
     'up' => function(){
@@ -12,6 +13,13 @@ return [
             $table->string('password');
             $table->timestamps();
         });
+
+        // create the first user
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => password_hash('secret', PASSWORD_DEFAULT)
+        ]);
     },
 
     'down' => function(){
