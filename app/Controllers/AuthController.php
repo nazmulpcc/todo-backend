@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controllers;
-
 
 use App\Helpers\Auth;
 use App\Models\User;
@@ -43,18 +41,18 @@ class AuthController extends Controller
             );
         }else{
             $this->failed(
-                null,
+                compact('email', 'password') + ['all' => $this->request->json->all()],
                 "Please check your username or password"
             );
         }
     }
 
+    /**
+     * Get logged in user
+     */
     public function me()
     {
-        if(Auth::check()){
-            $this->success(Auth::user()->toArray());
-        }else{
-            $this->failed();
-        }
+        $this->mustLogin();
+        $this->failed();
     }
 }
