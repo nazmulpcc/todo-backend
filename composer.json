@@ -1,6 +1,6 @@
 {
-    "name": "nazmulpcc/todo-api",
-    "description": "A simple todo api",
+    "name": "nazmulpcc/todo-backend",
+    "description": "PHP Backend for a simple todo application",
     "type": "project",
     "license": "MIT",
     "authors": [
